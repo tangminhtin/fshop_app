@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fshop_app/models/product.dart';
-import 'package:fshop_app/providers/products_provider.dart';
 import 'package:provider/provider.dart';
+import '../providers/product.dart';
 import '../providers/products_provider.dart';
 
 class ProductDetailScreen extends StatelessWidget {
@@ -14,7 +13,7 @@ class ProductDetailScreen extends StatelessWidget {
       context,
       listen: false,
     ).findById(productId);
- 
+
     return Scaffold(
       appBar: AppBar(
         title: Text(product.title),
